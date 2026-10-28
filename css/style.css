@@ -1,0 +1,680 @@
+:root {
+    --rosa: #F2C6D4;
+    --lilas: #D8C4EA;
+    --bege: #F3E7D6;
+    --verde: #D3E4CB;
+    --texto: #FFFCF8;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: georgia, serif;
+    background-color: var(--bege);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+.capa{
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    padding: 65px 28px;
+    border-radius: 220px 220px 24px 24px;
+    background: linear-gradient(
+        145deg
+        var(--branco),
+        var(--rosa),
+        var(--lilas),
+        var(--verde)
+    );
+    border:2px solid white;
+    box-shadow: 0 12px 35px #66526720
+}   
+.subtitulo{
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 22px;
+    color: var (--texto);
+    color: #705477;
+}
+h1{
+    font-size: clamp(36px, 9vw, 54px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: var (--texto);
+    color: #705477;
+}
+.mensagem{
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var (--texto);
+    color: #705477;
+}
+button{
+    font-size: 16px;
+    border-radius: 30px;
+   background-color: var(--rosa);
+    color: var(--texto);
+  font-family:inherit;
+    padding: 14px 28px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: var(--verde);
+    transform: translateY(-3px);
+}
+
+/* Nome delicado da Alice */
+.nome-principal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    margin: 10px 0 25px;
+}
+
+.letra-a {
+    position: absolute;
+    font-family: Georgia, serif;
+    font-size: 190px;
+    font-weight: normal;
+    line-height: 1;
+    color: #F2B9C5;
+    opacity: 0.9;
+}
+
+.nome-alice {
+    position: relative;
+    z-index: 1;
+    font-family: 'Parisienne', cursive;
+    font-size: 76px;
+    font-weight: normal;
+    color: #A5678B;
+    transform: translateY(10px);
+}
+
+/* Flores e borboletas do Jardim Encantado */
+.capa {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 28px 95px;
+}
+
+
+
+.capa > :not(.decoracao) {
+    position: relative;
+    z-index: 1;
+}
+
+.decoracao {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.decoracao-topo {
+    top: 0;
+    height: 150px;
+    background-image: url("../img/flores-topo.png");
+}
+
+.decoracao-base {
+    bottom: 0;
+    height: 160px;
+    background-image: url("../img/flores-base.png");
+}
+
+/* Segunda tela do convite */
+
+.pagina-detalhes {
+    display: none;
+    width: 100%;
+    max-width: 480px;
+    margin: 30px auto;
+    padding: 65px 28px;
+    text-align: center;
+    background: #FFF5F1;
+    border: 2px solid white;
+    border-radius: 220px 220px 24px 24px;
+    box-shadow: 0 12px 35px #66526720;
+    color: #705477;
+}
+
+.titulo-detalhes {
+    font-family: 'Parisienne', cursive;
+    font-size: 32px;
+    color: #A5678B;
+    margin-bottom: 20px;
+}
+
+.pagina-detalhes h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    color: #705477;
+    margin-bottom: 20px;
+}
+
+.frase-detalhes {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Data em destaque */
+
+.data-festa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 30px 0;
+    color: #A5678B;
+}
+
+.data-festa span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.data-festa strong {
+    font-size: 65px;
+    font-weight: normal;
+    color: #705477;
+}
+
+.local-festa {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* Botões delicados */
+
+.acoes-convite {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.botao-acao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 135px;
+    background: transparent;
+    border: none;
+    color: #705477;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.botao-acao span {
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.botao-acao:hover {
+    background: transparent;
+    color: #A5678B;
+}
+
+/* Ícones redondinhos do convite */
+
+.icone-acao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #F2C6D4;
+    border: 2px solid white;
+    box-shadow: 0 4px 12px #70547720;
+    font-size: 28px !important;
+    transition: 0.3s;
+}
+
+.botao-acao:nth-child(2) .icone-acao {
+    background: #D8C4EA;
+}
+
+.botao-acao:hover .icone-acao {
+    background: #D3E4CB;
+    transform: translateY(-4px);
+}
+
+/* Janelinha de sugestões de presentes */
+
+.lista-presentes {
+    margin-top: 30px;
+    padding: 25px 20px;
+    border-radius: 24px;
+    background: #FFF9F5;
+    border: 1px solid #EAD8E0;
+    color: #705477;
+    box-shadow: 0 5px 18px #70547712;
+    animation: aparecer 0.5s ease;
+}
+
+.lista-presentes[hidden] {
+    display: none;
+}
+
+.lista-presentes h3 {
+    font-family: 'Parisienne', cursive;
+    font-size: 32px;
+    font-weight: normal;
+    color: #A5678B;
+    margin-bottom: 15px;
+}
+
+.lista-presentes p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.lista-presentes .frase-presente {
+    font-style: italic;
+    color: #A5678B;
+}
+
+/* Decoração da segunda tela */
+
+.pagina-detalhes {
+    position: relative;
+    overflow: hidden;
+    background: #FFF5F1;
+    padding: 175px 28px 190px;
+}
+
+/* Mantém os textos e botões na frente das flores */
+.pagina-detalhes > :not(.decoracao) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 480px) {
+    .pagina-detalhes {
+        padding: 160px 20px 175px;
+    }
+
+    .data-festa {
+        gap: 12px;
+    }
+
+    .data-festa strong {
+        font-size: 55px;
+    }
+}
+
+/* Tela inicial do envelope */
+
+.tela-envelope {
+    min-height: 100vh;
+    width: 100%;
+    background: #F5E7E1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+    text-align: center;
+}
+
+.frase-envelope,
+.instrucao-envelope {
+    color: #A5678B;
+    font-family: 'Parisienne', cursive;
+    font-size: 27px;
+}
+
+/* Envelope */
+
+.envelope {
+    position: relative;
+    width: min(320px, 85vw);
+    height: 210px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background: #E8B8C8;
+    cursor: pointer;
+    perspective: 1000px;
+    box-shadow: 0 12px 30px #70547730;
+}
+
+/* Cartinha interna */
+
+.carta-envelope {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    left: 7.5%;
+    bottom: 10px;
+    background: #FFF9F5;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+/* Corpo do envelope */
+
+.corpo-envelope {
+    position: absolute;
+    inset: 0;
+    background: #F2C6D4;
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+    z-index: 2;
+}
+
+/* Aba triangular */
+
+.aba-envelope {
+    position: absolute;
+    inset: 0;
+    background: #E8B8C8;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top;
+    z-index: 3;
+}
+
+/* Lacre com a letra A */
+
+.lacre-envelope {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #D8C4EA;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    color: #705477;
+    z-index: 4;
+}
+
+/* Correção do lacre do envelope */
+
+.envelope .lacre-envelope {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    padding: 0;
+    border-radius: 50%;
+    background: #D8C4EA;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.envelope .letra-lacre {
+    position: static;
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    color: #8D527C;
+}
+
+.envelope .flor-lacre {
+    position: absolute;
+    left: -10px;
+    bottom: -7px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.envelope .borboleta-lacre {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Animação de abertura do envelope */
+
+.envelope .aba-envelope {
+    transition: transform 0.8s ease;
+    transform-origin: top center;
+    backface-visibility: hidden;
+}
+
+.envelope.aberto .aba-envelope {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.envelope .carta-envelope {
+    transition: transform 0.9s ease 0.4s;
+}
+
+.envelope.aberto .carta-envelope {
+    transform: translateY(-85px);
+}
+
+.envelope.aberto .lacre-envelope {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+/* Detalhes delicados do lacre */
+
+.envelope .flor-lacre {
+    color: #D995B3;
+    font-size: 24px;
+    left: -10px;
+    bottom: -8px;
+    text-shadow: 2px 2px 0 #F9DFE8;
+}
+
+.envelope .borboleta-lacre {
+    color: #A77BB5;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    right: -12px;
+    top: -15px;
+    transform: rotate(-20deg);
+}
+/* Acabamento do lacre */
+
+.envelope .lacre-envelope {
+    background: #E5CDE9;
+    border: 3px double #FFFFFF;
+    box-shadow: 0 3px 10px #A5678B40;
+}
+
+.envelope .letra-lacre {
+    font-family: Georgia, serif;
+    font-size: 43px;
+    color: #985B82;
+}
+
+.envelope .flor-lacre {
+    left: -12px;
+    bottom: -6px;
+    font-size: 21px;
+}
+
+.envelope .borboleta-lacre {
+    right: -15px;
+    top: -13px;
+    font-size: 29px;
+}
+
+/* Acabamento delicado do lacre da Alice */
+
+.envelope .lacre-envelope {
+    background: #E5CDE9;
+    border: 3px double #FFFFFF;
+    box-shadow: 0 3px 10px #A5678B40;
+}
+
+.envelope .letra-lacre {
+    font-family: Georgia, serif;
+    font-size: 43px;
+    color: #985B82;
+}
+
+.envelope .flor-lacre {
+    left: -12px;
+    bottom: -6px;
+    font-size: 21px;
+}
+
+.envelope .borboleta-lacre {
+    right: -15px;
+    top: -13px;
+    font-size: 29px;
+}
+
+/* Lacre personalizado da Alice */
+
+.envelope .lacre-envelope {
+    width: 85px;
+    height: 85px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.envelope .lacre-envelope img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Ajustes do envelope para celular */
+
+@media (max-width: 480px) {
+
+    .tela-envelope {
+        min-height: 100svh;
+        padding: 30px 18px;
+        gap: 28px;
+        box-sizing: border-box;
+    }
+
+    .frase-envelope,
+    .instrucao-envelope {
+        font-size: 25px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .envelope {
+        width: min(320px, 90vw);
+        height: 210px;
+        flex-shrink: 0;
+    }
+
+    .envelope .lacre-envelope {
+        width: 95px;
+        height: 95px;
+    }
+}
+/* Teste de tamanho no celular */
+
+@media (max-width: 480px) {
+    .tela-envelope {
+        font-size: 16px;
+    }
+
+    .envelope {
+        width: 320px;
+        max-width: 90vw;
+        height: 210px;
+    }
+}
+/* Data do convite da Alice */
+
+.data-festa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0;
+}
+
+.mes-festa {
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+    color: #A5678B;
+}
+
+.linha-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.linha-data span {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    color: #A5678B;
+    letter-spacing: 1px;
+}
+
+.linha-data strong {
+    font-family: 'Georgia', serif;
+    font-size: 58px;
+    font-weight: 500;
+    color: #755477;
+    padding: 0 15px;
+    border-left: 1px solid #DDB9CA;
+    border-right: 1px solid #DDB9CA;
+}
